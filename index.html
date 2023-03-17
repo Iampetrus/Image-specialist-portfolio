@@ -5,14 +5,45 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Company Home Page with Flexbox</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="modal.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cardo&family=Oswald&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
 
 	<header>
+
 		<div class="about">
-			<h4><span>A work selection by </span><a class="sobre" href="">sfgndfyj</a></h4>
+			<h4><span class="primero">A work selection by </span><a id="boton" class="sobre">Petrus</a></h4>
 		</div>
+
+		<div id="myModal" class="modal">
+  		
+        	<div class="modal-content">
+
+        		<div class="modal-header">
+        			<span class="close">&times;</span>
+        			<h2>Hola,</h2>
+        		</div>
+
+    			<div class="modal-body">
+      				<p>This is a brief selection of jobs I have done in advertising photography in the UK and Spain. Roles include Gaffer, Photo Assist and Digi in addition to positions held on TV, feature film and photo archives.</p>
+      				<p>The strength of my skillset lies on lighting and camera work. I have honed my craft working for worldwide brands, talented artists, hard working technicians and relevant museum photo archives updating jobs I worked on past February, Photo Assisting Shell middle east campaign.</p>
+      				<p>As a freelance based in Almeria and Malaga, I am willing to teamwork with like minded beings who love the craft of storytelling and team-building. You can find a complete CV here for your consideration should you require further details about my profile. I will be happy to get into the specifics of positions held in this work selection, and the broad range of my experience in the picture industry if you get in touch.</p>
+      				<p>In the end its all about stories we can tell through pictures which, is the reason why we should work together </p>
+    			</div>
+
+    			<div class="modal-footer">
+      				<p>T.+## ### ## ## ##</p> <p>@. ##########@gmail.com</p>
+    			</div>
+
+  	    	</div>
+
+		</div>
+
 	</header>
 
 	<main>
@@ -29,84 +60,197 @@
 
 			<div class="gridA">
 
-    			<div ID ="A" class="box">
-    				<img src="spotify-still.jpg">
-    			</div>
+    			<div id ="A" class="box">
+    				<div class="imagenes">
+    					<img src="spotify-still.jpg">
+    				</div>
 
-    			<div ID="B" class="box">
-    				<img src="audi-q3-1-by-marc-trautmann 2.jpg">
+    				<div class="logo">
+    					<img id="Alog" src="Spotify Logo (PNG720p) - Vector69Com.png">
+    					<a>
+    						<a class="youtube-link2" target="_blank"	href="https://www.youtube.com/watch?v=7ob_q2HsHWM">
+                    			<img id="youspot" src="pngwing.com(1) copy.png" class="youtube-btn"></a>
+                    	</a>
+    					
+    				</div>
+    			</div>
+    			
+    			<div ID ="B" class="box">
+    				<div class="imagenes">
+    					<img src="audi-q3-1-by-marc-trautmann 2.jpg">
+    				</div>
+    				<div class="logo">
+    					<img id="Blog" src="Audi_logo_PNG3.png">
+    				</div>
     			</div>
 
     			<div id="C" class="box">
-    				<img src="David Harriman. Instagram1 - Davidharriman.jpg">
+    				<div class="imagenes">
+    					<img src="David Harriman. Instagram1 - Davidharriman.jpg">
+    				</div>
+    				<div class="logo">
+    					<img id="Clog" src="HMGov-logo-png-6213476.png">
+    				</div>
     			</div>
 
     			<div id="D" class="box">
-    				<img src="dylantcollard.jpg">
+    				<div class="imagenes">
+    					<img src="dylantcollard.jpg">
+    				</div>
+    				<div class="logo">
+    					<img id="Dlog" src="pngwing.com(1).png">
+    				</div>
     			</div>
 
     			<div id="E" class="box">
-    				<img src="CarlotaOlcina.jpg">
+    				<div class="imagenes">
+    					<img src="CarlotaOlcina.jpg">
+    				</div>
+    				<div class="logo">
+    					<img id="Elog" src="antena-3-spain-atresmedia-corporacion-logo-televis-antena-5b31f8d2756d80.721966381530001618481.png">
+    				</div>
     			</div>
 
     			<div id="F" class="box">
-    				<img src="Federicosorrentino. East End Girls. Instagram-federicosorrentino_o.jpg">  
+    				<div class="imagenes">
+    					<img src="Federicosorrentino. East End Girls. Instagram-federicosorrentino_o.jpg">
+    				</div>
+    				<div class="logo">
+    					<img id="Flog" src="5a1ac535f65d84088faf1337(1).png">
+    				</div>
     			</div>
 
     			<div id="G" class="box">
-    				 <img src="warner-fridagold.png"> 
+    				<div class="imagenes">
+    				 	<img src="warner-fridagold.png"> 
+    				</div>
+    				<div class="logo">
+    					<img id="Glog" src="WMG_BIG.png">
+    				</div>
     			</div>
 
     			<div id="H" class="box">
-    				<img src="noromeworldwide-Dannynorthphoto (3).jpg">
+    				<div class="imagenes">
+    					<img src="noromeworldwide-Dannynorthphoto (3).jpg">
+    				</div>
+    				<div class="logo">
+    					<img id="Hlog" src="pngfind.com-hit-png-1316303.png">
+    				</div>
     			</div>
     			<!--
-    			<div id="I" class="box">
+    				<div id="I" class="box">
     				
-    			</div>
--->
+    				</div>
+				-->
     		</div>
 			
-    		<div class="gridB">
+<!-- --- --><div class="gridB">
 
     			<div id="K" class="box">
-    				<img src="I only see great.png">
+
+    				<div class="imagenes">
+    					<img src="I only see great.png">
+    				</div>
+
+    				<div class="logo">
+    					<img id="Klog" src="pngegg copy 2.png">
+    						<a>
+    							<a class="youtube-link" target="_blank"	href="https://m.youtube.com/watch?v=vmmhHmOx4VU">
+                    			<img id="youpum" src="pngwing.com(1) copy.png" class="youtube-btn"></a>
+                    		</a>
+    				</div>
+
     			</div>
 
     			<div id="L" class="box">
-    				<img src="Max Hetherington. Instagram-iammaximilianiam.jpg">
+
+    				<div class="imagenes">
+    					<img src="Max Hetherington. Instagram-iammaximilianiam.jpg">
+    				</div>
+
+    				<div class="logo">
+    					<img id="Llog" src="Adidas_Logo.svg.png">
+    				</div>
+
     			</div>
 
     			<div id="M" class="box">
-    				<img src="todd Anthony, locate productions, DVLA London (driver and vehicle licensing agency).jpg">
+    				<div class="imagenes">
+    					<img src="todd Anthony, locate productions, DVLA London (driver and vehicle licensing agency).jpg">
+    				</div>
+    				<div class="logo">
+    					<img id="Mlog" src="HMGov-logo-png-6213476.png">
+    				</div>
     			</div>
 
     			<div id="N" class="box">
-    				<img src="Triger-Jajuar-landrover. snapshot.JPG">
-    			</div>
-
-    			<div id="N" class="box">
-    				<img src="the wade brothers-holiday inn-still productions.jpg">
+    				<div class="imagenes">
+    					<img src="Triger-Jajuar-landrover. snapshot.JPG">
+    				</div>
+    				<div class="logo">
+    					<img id="Nlog" src="kisspng-jaguar-land-rover-jaguar-cars-range-rover-evoque-range-rover-logo-5b321ab7642889.9737082515300102954103.png">
+    				</div>
     			</div>
 
     			<div id="O" class="box">
-    				<img src="keane-still.png">
+    				<div class="imagenes">
+    					<img src="the wade brothers-holiday inn-still productions.jpg">
+    				</div>
+    				<div class="logo">
+    					<img id="Olog" src="Holiday-Inn-Logo.png">
+
+    				</div>
     			</div>
 
     			<div id="P" class="box">
-    				<img src="euromillions, david harriman, still productions, wyatt clarke jones.jpg">
+    				<div class="imagenes">
+    					<img src="keane-still.png">
+    				</div>
+    				<div class="logo">
+    					<img id="Plog" src="pngkit_wells-fargo-png-logo_3886563.png">
+    				</div>
     			</div>
 
     			<div id="Q" class="box">
-    				<img src="Mercedes-Petronas-still.png">
+    				<div class="imagenes">
+    					<img src="euromillions, david harriman, still productions, wyatt clarke jones.jpg">
+    				</div>
+    				<div class="logo">
+    					<img id="Qlog" src="kisspng-united-kingdom-national-lottery-camelot-group-lott-lottery-5ac18b4c5ba983.1265158515226335483755.png">
+    				</div>
     			</div>
 
     			<div id="R" class="box">
-    				<img src="Screenshot 2022-11-04 at 17.53.41 (2).png">
+    				<div class="imagenes">
+    					<img src="Mercedes-Petronas-still.png">
+    				</div>
+    				<div class="logo">
+    					<img id="Rlog" src="pngegg copy.png">
+    				</div>
     			</div>
 
     			<div id="S" class="box">
-    				<img src="Audi main build-still.jpg">
+    				<div class="imagenes">
+    					<img src="Screenshot 2022-11-04 at 17.53.41 (2).png">
+    				</div>
+    				<div class="logo">
+    					<img id="Slog" src="clipart1111327.png">
+    				</div>
+
+    			</div>
+
+    			<div id="T" class="box">
+    				<div class="imagenes">
+    					<img src="Audi main build-still.jpg">
+    				</div>
+    				<div class="logo">
+    					<img id="Tlog" src="Audi_logo_PNG3.png">
+    					<a>
+    						<a class="video-link" target="_blank" href="https://www.samfriendfilm.com/commercials-2?pgid=klcn0ga7-1767c778-b423-4ddb-9ded-273e1c743a34">
+                    			<img src="kisspng-youtube-logo-computer-icons-5adcd5332b87b3.1566785315244219391783.png" class="video-btn">
+                    		</a>
+                    	</a>
+    				</div>
     			</div>
 
   			</div>
@@ -114,12 +258,15 @@
 		</article>
 
 	</main>
+	
+	 <script src="JS.js"></script>
+	 <script src="modal.js"></script>
 
 </body>
 
 <footer>
 	<div class="sign">
-		<h4>Made by <a class="hi" href="">petrus</a> 2022</h4>
+		<h4>Made by <a class="hi" href="mailto:pedroagustinlecumberri@gmail.com?subject=Query%20from%20portfolio">@petrus</a> 2023</h4>
 	</div>
 </footer>
 
