@@ -172,22 +172,38 @@ img {
 }
 
 /* ------------------------------ logos */
-#A, #B, #C, #D, #E, #F, #G, #H, #K, #L, #M, #N, #O, #P, #Q, #R, #S, #T {
+
+.box {
 position: relative;
 }
 
 .logo {
     position: absolute;
-    visibility: hidden;
     top:0;
+    opacity:0;
+}
+
+.imagenes {
+    position: relative;   
 }
 
 .visib {
-    visibility: visible;
+    opacity: 1;
 }
 
 .novisib {
-    visibility: hidden;
+    opacity:0.1;
+}
+
+.box:hover .imagenes {
+    opacity:0.1;
+}
+
+.box:hover .logo {
+    opacity:1;
+    transition: opacity .6s ease;
+ 
+
 }
 
 /*
@@ -226,16 +242,16 @@ JS.js / Solucion 2
     width: 70%;
 }
 #Glog {
-    margin: 8% auto 0 auto ;
+    margin: 9% auto 0 auto ;
     width: 50%;
 }
 #Hlog {
-    width: 50%;
-    margin: 48% auto;
+    width: 70%;
+    margin: 30% auto;
 }
 
 #Klog {
-    margin: 2% auto;
+    margin: 10% auto;
     width: 50%;
 }
 
@@ -260,8 +276,8 @@ JS.js / Solucion 2
 }
 
 #Plog {
-    margin: 28% auto;
-    width: 50%;
+    margin: 22% auto;
+    width: 60%;
 }
 
 #Qlog {
@@ -270,7 +286,7 @@ JS.js / Solucion 2
 }
 
 #Rlog {
-    margin: 5% auto;
+    margin: 2% auto;
     width: 55%;
 }
 
@@ -295,8 +311,8 @@ JS.js / Solucion 2
     top: 80%;
     left: 39%;
     width: 15%;
-    
 }
+
 .video-link {
     position: absolute;
     top:100%;
@@ -312,15 +328,18 @@ JS.js / Solucion 2
 } 
 
 .youtube-link2:hover {
-    opacity: .6;
+    opacity: .4;
+    transition: opacity .3s ease;
 }
 
 .video-link:hover {
-    opacity: .6;
+    opacity: .4;
+    transition: opacity .3s ease;
 } 
 
 .youtube-link:hover {
-    opacity: .6;
+    opacity: .4;
+    transition: opacity .3s ease;
 }
 
 

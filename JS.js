@@ -1,22 +1,22 @@
-let imagenes = document.querySelectorAll('.imagenes');
-let logos = document.querySelectorAll('.logo');
 
+
+/*
+const imagenes = document.querySelectorAll('.imagenes');
+
+ put the click event listener to the parent element
 imagenes.forEach((imagen, index) => {
-
   let count = 0;
-
-  imagen.addEventListener('click', () => {
+  imagen.addEventListener('click', (e) => {
     if (count % 2 == 0) {
-      imagen.style.opacity = 0.2;
-      logos[index].classList.add("visib");
+      imagen.style.opacity = 0.1;
     } else {
       imagen.style.opacity = 1;
-      logos[index].classList.add("novisib");
     }
     count++;
   });
-
 });
+
+*/
 
 /* Solucion 1*/
 /*
