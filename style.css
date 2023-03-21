@@ -92,6 +92,7 @@ p {
     letter-spacing: .1rem;
     font-size: clamp(.1rem, 2.5vw, 1rem);
     text-align: justify;
+    max-width: 65ch;
 }
 
 #ppal {
@@ -202,8 +203,6 @@ position: relative;
 .box:hover .logo {
     opacity:1;
     transition: opacity .6s ease;
- 
-
 }
 
 /*
@@ -358,7 +357,11 @@ JS.js / Solucion 2
   .gridB {
     margin: 1% 0 0 0;
   }
-}
+
+  p {
+    max-width: 45ch;
+  }
+
 }
 
 /* ---------------------------- footer */
