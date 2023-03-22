@@ -32,32 +32,24 @@ h2, h3, h4, h5, p{
 
 
 /*---------------------------------------- clickame */
+/*
 .sobre, .hi {
     color: grey;
     text-decoration: none;
     animation: animation 4s infinite;
 }
 
-.sobre:hover {
-    cursor: pointer;
-
-}
-
 @keyframes animation{
     0% {
         color: #000000;
-        /*color: black;*/
-        /*box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);*/
     }
 
     25% {
         color: #787878;
-        /*box-shadow: 0 0 50px 50px rgba(0, 0, 0, 0);*/
     }
 
     50% {
         color: #B8B8B8;
-        /*color: black;*/
     }
 
     75% {
@@ -67,6 +59,50 @@ h2, h3, h4, h5, p{
     100% {
         color:#000000;
     }
+}
+*/
+
+.sobre:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.quien, .hi {
+    animation: color-animation 4s linear infinite;
+}
+
+.quien-1 {
+    --color-1: #281B24;
+    --color-2: #3C4B4D;
+    --color-3: #F2AB26;
+}
+
+.quien-2 {
+    --color-1: #D87D0D;
+    --color-2: #890A03;
+    --color-3: #281B24;
+}
+
+.quien-3 {
+    --color-1: #3C4B4D;
+    --color-2: #F2AB26;
+    --color-3: #D87D0D;
+}
+
+.quien-4 {
+    --color-1: #890A03;
+    --color-2: #281B24;
+    --color-3: #3C4B4D;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var()}
+  33%   {color: var(--color-2)}
+  65%   {color: var()}
+  66%   {color: var(--color-3)}
+  99%   {color: var()}
+  100%  {color: var(--color-1)}
 }
 
 h1 {
@@ -111,7 +147,6 @@ p {
 .title_part {
     display: inline;
     position: relative;
-
 }
 
 /* --------------------------------- spacing - alignm */
@@ -367,7 +402,7 @@ JS.js / Solucion 2
 /* ---------------------------- footer */
 
 .hi {
-   
+   text-decoration: none;
 }
 
 .sign {
