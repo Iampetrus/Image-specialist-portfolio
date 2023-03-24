@@ -32,47 +32,17 @@ h2, h3, h4, h5, p{
 
 
 /*---------------------------------------- clickame */
-/*
-.sobre, .hi {
-    color: grey;
-    text-decoration: none;
-    animation: animation 4s infinite;
-}
-
-@keyframes animation{
-    0% {
-        color: #000000;
-    }
-
-    25% {
-        color: #787878;
-    }
-
-    50% {
-        color: #B8B8B8;
-    }
-
-    75% {
-        color: #787878;
-    }
-
-    100% {
-        color:#000000;
-    }
-}
-*/
-
 .sobre:hover {
     cursor: pointer;
     color: black;
 }
 
-.quien, .hi {
+.quien, .hi, #cv {
     animation: color-animation 4s linear infinite;
 }
 
 .quien-1 {
-    --color-1: #281B24;
+    /*--color-1: #281B24;*/
     --color-2: #3C4B4D;
     --color-3: #F2AB26;
 }
@@ -80,7 +50,7 @@ h2, h3, h4, h5, p{
 .quien-2 {
     --color-1: #D87D0D;
     --color-2: #890A03;
-    --color-3: #281B24;
+    /*--color-3: #281B24;*/
 }
 
 .quien-3 {
@@ -91,7 +61,7 @@ h2, h3, h4, h5, p{
 
 .quien-4 {
     --color-1: #890A03;
-    --color-2: #281B24;
+    /*--color-2: #281B24;*/
     --color-3: #3C4B4D;
 }
 
@@ -149,6 +119,18 @@ p {
     position: relative;
 }
 
+.bold {
+    font-weight: bold;
+}
+
+#cv {
+    color: black;
+    text-decoration: none;
+}
+
+#cv:hover {
+    font-weight: bold;
+}
 /* --------------------------------- spacing - alignm */
 
 .about {
@@ -334,10 +316,13 @@ JS.js / Solucion 2
     width: 60%;
 }
 
-/* ----------------------------- imagenes */
-.box:hover {
-    cursor: pointer;
+#Vlog {
+     margin: 40% auto 0 auto;
+    width: 60%;
 }
+
+/* ----------------------------- imagenes */
+
 
 /* -------------------------------video links */
 .youtube-link {
