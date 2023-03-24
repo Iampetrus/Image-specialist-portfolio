@@ -131,6 +131,10 @@ p {
 #cv:hover {
     font-weight: bold;
 }
+
+.modal-body > p{
+    margin-bottom: 1rem;
+}
 /* --------------------------------- spacing - alignm */
 
 .about {
@@ -192,7 +196,7 @@ img {
 /* ------------------------------ logos */
 
 .box {
-position: relative;
+    position: relative;
 }
 
 .logo {
@@ -219,7 +223,7 @@ position: relative;
 
 .box:hover .logo {
     opacity:1;
-    transition: opacity .6s ease;
+    transition: opacity 1s ease;
 }
 
 /*
@@ -359,6 +363,10 @@ JS.js / Solucion 2
 .youtube-link:hover {
     opacity: .4;
     transition: opacity .3s ease;
+}
+
+#youpum {
+    margin: 0 1.2rem;
 }
 
 
