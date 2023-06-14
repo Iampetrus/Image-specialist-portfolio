@@ -46,55 +46,32 @@ h2, h3, h4, h5, p{
 }
 
 .quien, .hi, #cv {
-    animation: color-animation 4s linear infinite;
+    animation: ani 1.2s linear infinite;
 }
 
 .quien-1 {
-    /*
-    --color-1: #281B24;
-    --color-2: #3C4B4D;
-    --color-3: #F2AB26;
-    */
-    --color-1: white;
-    --color-3: black;
-}
-
-.quien-2 {
-    /*
-    --color-1: #D87D0D;
-    --color-2: #890A03;
-    --color-3: #281B24;
-    */
-    
+    animation-delay: .7s;
 }
 
 .quien-3 {
-    /*
-    --color-1: #3C4B4D;
-    --color-2: #F2AB26;
-    --color-3: #D87D0D;
-    */
-    --color-3: white;
-    --color-1: black;
+   animation-delay: 1.7s;
 }
 
-.quien-4 {
-    /*
-    --color-1: #890A03;
-    --color-2: #281B24;
-    --color-3: #3C4B4D;
-    */
-}
+@keyframes ani {
+    0%{
+       color: #44848;
+       text-shadow: none;}
+  
+    90%{
+       color:#44848;
+       text-shadow: none;}
+  
+    100%{
+       color:#fff900;
+       text-shadow: 0 0 7px #fff900, 0 0 70px #fff123;}
+  }
 
-@keyframes color-animation {
-  0%    {color: var(--color-1)}
-  32%   {color: var()}
-  33%   {color: var(--color-2)}
-  65%   {color: var()}
-  66%   {color: var(--color-3)}
-  99%   {color: var()}
-  100%  {color: var(--color-1)}
-}
+  /* ---------------------- fonts */
 
 h1 {
     /*font-family: 'Alternate Gothic';*/
@@ -167,9 +144,12 @@ header {
     border-width: 0 0 1px 0;
     border-style: solid;
     border-color: #000;
-    margin: 0 1rem;
+    margin: 0 .4rem;
     background-color: white;
-    width: 90%;
+
+    position: sticky;
+    top: 0;
+    z-index: 99;
 }
 
 .dos {
@@ -180,6 +160,11 @@ header {
     padding: 1rem 0;
     display: flex;
     flex-direction: row;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
 }
 
 /* -------------------------------- grid*/
@@ -240,7 +225,7 @@ img {
 }
 
 .box:hover .imagenes {
-    opacity:0.1;
+    opacity:0.3;
 }
 
 .box:hover .logo {
