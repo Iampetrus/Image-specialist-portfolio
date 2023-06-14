@@ -1,423 +1,432 @@
 html {
-    box-sizing: border-box;
-    font-size: 16px;
-  }
-  
-  body {
-      max-width: 1500px;
-      margin: 0 auto;
-  }
-  
-  /* -------------------------------------- fonts */
-  /*
-  @font-face {
-      font-family: 'Alternate Gothic';
-      src: url('Alternate Gothic W01 No 3.ttf') format('truetype');
-  }
-  
-  @font-face {
-      font-family: 'Times Roman';
-      src: url('OPTITimes-Roman.otf') format('opentype');
-  }
-  */
-  
-  #ppal, #sec {
-      font-family: 'Oswald', sans-serif;
-      
-  }
-  
-  h2, h3, h4, h5, p{
-      font-family: 'Cardo', serif;
-  }
-  
-  
-  /*---------------------------------------- clickame */
-  #boton {
-      font-weight: bold;
-  }
-  
-  #boton:hover {
-      font-weight: normal;
-  }
-  
-  .sobre:hover {
-      cursor: pointer;
-      color: black;
-  }
-  
-  .quien, .hi, #cv {
-      /* animation: color-animation 4s linear infinite; */
-      animation: ani 1.2s linear infinite;
-  }
-  
-  .quien-1 {
-      animation-delay: .7s;
-  }
-  
-  .quien-3 {
-     animation-delay: 1.7s;
-  }
-  
-  @keyframes ani {
-    0%{
-       color: #44848;
-       text-shadow: none;}
-  
-    90%{
-       color:#44848;
-       text-shadow: none;}
-  
-    100%{
-       color:#fff900;
-       text-shadow: 0 0 7px #fff900, 0 0 70px #fff123;}
-  }
-  
-  /* ----------------------------------------- fonts */
-  
-  h1 {
-      /*font-family: 'Alternate Gothic';*/
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      font-size: clamp(1rem, 10vw, 9.5rem);
-      margin: .5rem 0;
-      }
-  
-  h4 {
-      /*font-family: 'Times Roman';*/
-      font-weight: lighter;
-      letter-spacing: .1rem;
-      font-size: clamp(.1rem, 2.5vw, 1rem);
-  }
-  
-  p {
-      /*font-family: 'Times Roman';*/
-      font-weight: lighter;
-      letter-spacing: .1rem;
-      font-size: clamp(.1rem, 2.5vw, 1rem);
-      text-align: justify;
-      max-width: 65ch;
-  }
-  
-  #ppal {
-      font-size: 50%;
-      font-weight: 400;
-      word-spacing: 100%;
-      margin:0 0 -.5% 0;
-  }
-  
-  #sec {
-      word-spacing: 30%;
-      padding: 0;
-      margin:-1% 0 -.5% 0;
-  }
-  
-  .title_part {
-      display: inline;
-      position: relative;
-  }
-  
-  .bold {
-      font-weight: bold;
-  }
-  
-  #cv {
-      color: black;
-      text-decoration: none;
-  }
-  
-  #cv:hover {
-      font-weight: bold;
-  }
-  
-  .modal-body > p{
-      margin-bottom: 1rem;
-  }
-  /* --------------------------------- spacing - alignm */
-  
-  .about {
-  
-      text-align: center;    
-      margin: 0 5vw;
-  }
-  
-  header {
-      border-width: 0 0 1px 0;
-      border-style: solid;
-      border-color: #000;
-      margin: 0 .4rem;
-      background-color: white;
-  
-      position: sticky;
-      top: 0; 
-      z-index: 99;
-  }
-  
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* -------------------------------------- fonts */
+/*
+@font-face {
+    font-family: 'Alternate Gothic';
+    src: url('Alternate Gothic W01 No 3.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Times Roman';
+    src: url('OPTITimes-Roman.otf') format('opentype');
+}
+*/
+
+#ppal, #sec {
+    font-family: 'Oswald', sans-serif;
+    
+}
+
+h2, h3, h4, h5, p{
+    font-family: 'Cardo', serif;
+}
+
+
+/*---------------------------------------- clickame */
+#boton {
+    font-weight: bold;
+}
+
+#boton:hover {
+    font-weight: normal;
+}
+
+.sobre:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.quien, .hi, #cv {
+    animation: color-animation 4s linear infinite;
+}
+
+.quien-1 {
+    /*
+    --color-1: #281B24;
+    --color-2: #3C4B4D;
+    --color-3: #F2AB26;
+    */
+    --color-1: white;
+    --color-3: black;
+}
+
+.quien-2 {
+    /*
+    --color-1: #D87D0D;
+    --color-2: #890A03;
+    --color-3: #281B24;
+    */
+    
+}
+
+.quien-3 {
+    /*
+    --color-1: #3C4B4D;
+    --color-2: #F2AB26;
+    --color-3: #D87D0D;
+    */
+    --color-3: white;
+    --color-1: black;
+}
+
+.quien-4 {
+    /*
+    --color-1: #890A03;
+    --color-2: #281B24;
+    --color-3: #3C4B4D;
+    */
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var()}
+  33%   {color: var(--color-2)}
+  65%   {color: var()}
+  66%   {color: var(--color-3)}
+  99%   {color: var()}
+  100%  {color: var(--color-1)}
+}
+
+h1 {
+    /*font-family: 'Alternate Gothic';*/
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: clamp(1rem, 10vw, 9.5rem);
+    margin: .5rem 0;
+    }
+
+h4 {
+    /*font-family: 'Times Roman';*/
+    font-weight: lighter;
+    letter-spacing: .1rem;
+    font-size: clamp(.1rem, 2.5vw, 1rem);
+}
+
+p {
+    /*font-family: 'Times Roman';*/
+    font-weight: lighter;
+    letter-spacing: .1rem;
+    font-size: clamp(.1rem, 2.5vw, 1rem);
+    text-align: justify;
+    max-width: 65ch;
+}
+
+#ppal {
+    font-size: 50%;
+    font-weight: 400;
+    word-spacing: 100%;
+    margin:0 0 -.5% 0;
+}
+
+#sec {
+    word-spacing: 30%;
+    padding: 0;
+    margin:-1% 0 -.5% 0;
+}
+
+.title_part {
+    display: inline;
+    position: relative;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#cv {
+    color: black;
+    text-decoration: none;
+}
+
+#cv:hover {
+    font-weight: bold;
+}
+
+.modal-body > p{
+    margin-bottom: 1rem;
+}
+/* --------------------------------- spacing - alignm */
+
+.about {
+    text-align: center;    
+    margin: 0 5vw;
+}
+
+header {
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #000;
+    margin: 0 1rem;
+
+}
+
+.dos {
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: #000;
+    margin: 0 1rem;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: row;
+}
+
+/* -------------------------------- grid*/
+
+.gridA {
+  display: grid;
+  width: 50%;
+  height: auto;
+  grid-gap: .5rem;
+  grid-auto-rows: minmax(auto, min-content);
+  grid-template-columns: 1fr;
+  margin-right: .25rem;
+  overflow: hidden;
+}
+
+.gridB {
+  display: grid;
+  width: 50%;
+  height: auto;
+  grid-gap: .5rem;
+  grid-auto-rows: minmax(auto, min-content);
+  grid-template-columns: 1fr;
+  margin-left: .25rem;
+  overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: auto; /*img use its full width leaving empty height space*/
+    object-fit: cover;
+    display: block; /*fill empty space remaining after adding img*/
+    max-height: 100%;
+    overflow: hidden;
+}
+
+/* ------------------------------ logos */
+
+.box {
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top:0;
+    opacity:0;
+}
+
+.imagenes {
+    position: relative;   
+}
+
+.visib {
+    opacity: 1;
+}
+
+.novisib {
+    opacity:0.1;
+}
+
+.box:hover .imagenes {
+    opacity:0.1;
+}
+
+.box:hover .logo {
+    opacity:1;
+    transition: opacity 1s ease;
+}
+
+/*
+JS.js / Solucion 2
+
+.show { opacity: 1; }
+.hide { opacity: 0; }
+*/
+#Alog {
+    margin: 8% auto;
+    width: 60%;
+}
+
+#Blog {
+    margin: 18% auto;
+    width: 60%;
+}
+
+#Clog {
+    margin: 50% auto 0 auto ;
+    width: 65%;
+}
+
+#Dlog {
+    margin: 4% auto 0 auto ;
+    width: 60%;
+}
+
+#Elog {
+    margin: 18% auto 0 auto ;
+    width: 30%;
+}
+
+#Flog {
+    margin: 60% auto 0 auto ;
+    width: 70%;
+}
+#Glog {
+    margin: 9% auto 0 auto ;
+    width: 50%;
+}
+#Hlog {
+    width: 70%;
+    margin: 30% auto;
+}
+
+#Klog {
+    margin: 10% auto;
+    width: 50%;
+}
+
+#Llog {
+    margin: 50% auto 0 auto;
+    width: 40%;
+}
+
+#Mlog {
+    margin: 20% auto 0 auto;
+    width: 60%;
+}
+
+#Nlog {
+    margin: 50% auto 0 auto;
+    width: 35%;
+}
+
+#Olog {
+    margin: 13% auto 0 auto;
+    width: 40%;
+}
+
+#Plog {
+    margin: 22% auto;
+    width: 60%;
+}
+
+#Qlog {
+    margin: 12% auto 0 auto;
+    width: 20%;
+}
+
+#Rlog {
+    margin: 2% auto;
+    width: 55%;
+}
+
+#Slog {
+    margin: 22% auto 0 auto;
+    width: 40%;
+}
+
+#Tlog {
+    margin: 12% auto 0 auto;
+    width: 60%;
+}
+
+#Vlog {
+     margin: 40% auto 0 auto;
+    width: 60%;
+}
+
+/* ----------------------------- imagenes */
+
+
+/* -------------------------------video links */
+.youtube-link {
+    position: absolute;
+    top: 80%;
+    left: 39%;
+    width: 15%;
+}
+
+.video-link {
+    position: absolute;
+    top:100%;
+    width: 10%;
+    left: 44%;
+}
+
+.youtube-link2 {
+    position: absolute;
+    top: 75%;
+    left: 42%;
+    width: 15%;
+} 
+
+.youtube-link2:hover {
+    opacity: .4;
+    transition: opacity .3s ease;
+}
+
+.video-link:hover {
+    opacity: .4;
+    transition: opacity .3s ease;
+} 
+
+.youtube-link:hover {
+    opacity: .4;
+    transition: opacity .3s ease;
+}
+
+#youpum {
+    margin: 0 1.2rem;
+}
+
+
+/*  ---------------------------- mediaQ */
+
+@media only screen and (max-width: 800px) {
   .dos {
-      border-width: 1px 0 0 0;
-      border-style: solid;
-      border-color: #000;
-      margin: 0 1rem;
-      padding: 1rem 0;
-      display: flex;
-      flex-direction: row;
+    display: flex;
+    flex-direction: column;
   }
-  
-  body {
-      display: flex;
-      flex-direction: column;
+
+  .gridA, .gridB {
+    width: 100%;
   }
-  
-  /* -------------------------------- fixed header*/
-  
-  /* -------------------------------- grid*/
-  
-  .gridA {
-    display: grid;
-    width: 50%;
-    height: auto;
-    grid-gap: .5rem;
-    grid-auto-rows: minmax(auto, min-content);
-    grid-template-columns: 1fr;
-    margin-right: .25rem;
-    overflow: hidden;
-  }
-  
+
   .gridB {
-    display: grid;
-    width: 50%;
-    height: auto;
-    grid-gap: .5rem;
-    grid-auto-rows: minmax(auto, min-content);
-    grid-template-columns: 1fr;
-    margin-left: .25rem;
-    overflow: hidden;
+    margin: 1% 0 0 0;
   }
-  
-  img {
-      width: 100%;
-      height: auto; /*img use its full width leaving empty height space*/
-      object-fit: cover;
-      display: block; /*fill empty space remaining after adding img*/
-      max-height: 100%;
-      overflow: hidden;
+
+  p {
+    max-width: 45ch;
   }
-  
-  /* ------------------------------ logos */
-  
-  .box {
-      position: relative;
-  }
-  
-  .logo {
-      position: absolute;
-      top:0;
-      opacity:0;
-  }
-  
-  .imagenes {
-      position: relative;   
-  }
-  
-  .visib {
-      opacity: 1;
-  }
-  
-  .novisib {
-      opacity:0.1;
-  }
-  
-  .box:hover .imagenes {
-      opacity:0.3;
-  }
-  
-  .box:hover .logo {
-      opacity:1;
-      transition: opacity 1s ease;
-  }
-  
-  /*
-  JS.js / Solucion 2
-  
-  .show { opacity: 1; }
-  .hide { opacity: 0; }
-  */
-  #Alog {
-      margin: 8% auto;
-      width: 60%;
-  }
-  
-  #Blog {
-      margin: 18% auto;
-      width: 60%;
-  }
-  
-  #Clog {
-      margin: 50% auto 0 auto ;
-      width: 65%;
-  }
-  
-  #Dlog {
-      margin: 4% auto 0 auto ;
-      width: 60%;
-  }
-  
-  #Elog {
-      margin: 18% auto 0 auto ;
-      width: 30%;
-  }
-  
-  #Flog {
-      margin: 60% auto 0 auto ;
-      width: 70%;
-  }
-  #Glog {
-      margin: 9% auto 0 auto ;
-      width: 50%;
-  }
-  #Hlog {
-      width: 70%;
-      margin: 30% auto;
-  }
-  
-  #Klog {
-      margin: 10% auto;
-      width: 50%;
-  }
-  
-  #Llog {
-      margin: 50% auto 0 auto;
-      width: 40%;
-  }
-  
-  #Mlog {
-      margin: 20% auto 0 auto;
-      width: 60%;
-  }
-  
-  #Nlog {
-      margin: 50% auto 0 auto;
-      width: 35%;
-  }
-  
-  #Olog {
-      margin: 13% auto 0 auto;
-      width: 40%;
-  }
-  
-  #Plog {
-      margin: 22% auto;
-      width: 60%;
-  }
-  
-  #Qlog {
-      margin: 12% auto 0 auto;
-      width: 20%;
-  }
-  
-  #Rlog {
-      margin: 2% auto;
-      width: 55%;
-  }
-  
-  #Slog {
-      margin: 22% auto 0 auto;
-      width: 40%;
-  }
-  
-  #Tlog {
-      margin: 12% auto 0 auto;
-      width: 60%;
-  }
-  
-  #Vlog {
-       margin: 40% auto 0 auto;
-      width: 60%;
-  }
-  
-  /* ----------------------------- imagenes */
-  
-  
-  /* -------------------------------video links */
-  .youtube-link {
-      position: absolute;
-      top: 80%;
-      left: 39%;
-      width: 15%;
-  }
-  
-  .video-link {
-      position: absolute;
-      top:100%;
-      width: 10%;
-      left: 44%;
-  }
-  
-  .youtube-link2 {
-      position: absolute;
-      top: 75%;
-      left: 42%;
-      width: 15%;
-  } 
-  
-  .youtube-link2:hover {
-      opacity: .4;
-      transition: opacity .3s ease;
-  }
-  
-  .video-link:hover {
-      opacity: .4;
-      transition: opacity .3s ease;
-  } 
-  
-  .youtube-link:hover {
-      opacity: .4;
-      transition: opacity .3s ease;
-  }
-  
-  #youpum {
-      margin: 0 1.2rem;
-  }
-  
-  
-  /*  ---------------------------- mediaQ */
-  
-  @media only screen and (max-width: 800px) {
-    .dos {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .gridA, .gridB {
-      width: 100%;
-    }
-  
-    .gridB {
-      margin: 1% 0 0 0;
-    }
-  
-    p {
-      max-width: 45ch;
-    }
-  
-  }
-  
-  /* ---------------------------- footer */
-  
-  .hi {
-     text-decoration: none;
-     font-weight: bold;
-     color: #3333ff;
-  }
-  
-  .hi:hover {
-      font-weight: normal;
-  }
-  
-  .sign {
-      text-align: center;
-      border-top: 1px solid black;
-      margin: 0 1rem;
-  }
-  
+
+}
+
+/* ---------------------------- footer */
+
+.hi {
+   text-decoration: none;
+   font-weight: bold;
+   color: #3333ff;
+}
+
+.hi:hover {
+    font-weight: normal;
+}
+
+.sign {
+    text-align: center;
+    border-top: 1px solid black;
+    margin: 0 1rem;
+}
