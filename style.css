@@ -168,7 +168,8 @@ header {
     border-style: solid;
     border-color: #000;
     margin: 0 1rem;
-
+    background-color: white;
+    width: 90%;
 }
 
 .dos {
