@@ -9,28 +9,14 @@ html {
   }
   
   /* -------------------------------------- fonts */
-  /*
-  @font-face {
-      font-family: 'Alternate Gothic';
-      src: url('Alternate Gothic W01 No 3.ttf') format('truetype');
-  }
-  
-  @font-face {
-      font-family: 'Times Roman';
-      src: url('OPTITimes-Roman.otf') format('opentype');
-  }
-  */
-  
   #ppal, #sec {
       font-family: 'Oswald', sans-serif;
-      
   }
   
   h2, h3, h4, h5, p{
       font-family: 'Cardo', serif;
   }
-  
-  
+
   /*---------------------------------------- clickame */
   #boton {
       font-weight: bold;
@@ -50,10 +36,6 @@ html {
             animation: squiggly-anim 0.34s linear infinite;
   }
   
-  .quien {
-      
-  }
-  
   @keyframes squiggly-anim {
     0% {
       filter: url("#squiggly-0");
@@ -71,8 +53,8 @@ html {
       filter: url("#squiggly-4");
     }
   }
+
   /* ----------------------------------------- fonts */
-  
   h1 {
       /*font-family: 'Alternate Gothic';*/
       text-align: center;
@@ -134,8 +116,8 @@ html {
   .modal-body > p{
       margin-bottom: 1rem;
   }
+
   /* --------------------------------- spacing - alignm */
-  
   .about {
   
       text-align: center;    
@@ -148,7 +130,6 @@ html {
       border-color: #000;
       margin: 0 .4rem;
       background-color: white;
-  
       position: sticky;
       top: 0; 
       z-index: 99;
@@ -170,7 +151,6 @@ html {
   }
   
   /* -------------------------------- grid*/
-  
   .gridA {
     display: grid;
     width: 50%;
@@ -203,7 +183,6 @@ html {
   }
   
   /* ------------------------------ logos */
-  
   .box {
       position: relative;
   }
@@ -369,9 +348,7 @@ html {
       margin: 0 1.2rem;
   }
   
-  
   /*  ---------------------------- mediaQ */
-  
   @media only screen and (max-width: 800px) {
     .dos {
       display: flex;
@@ -393,11 +370,9 @@ html {
     #myModal {
       padding-top: 10%;
     }
-  
   }
   
   /* ---------------------------- footer */
-  
   .hi {
      text-decoration: none;
      color: black;

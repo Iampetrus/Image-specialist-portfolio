@@ -11,7 +11,6 @@
   overflow: auto; /* Enable scroll if needed */
   background-color: white; /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-
 }
 
 /* Modal Content - white box */
@@ -28,7 +27,6 @@
   animation-name: animatetop;
   animation-duration: 0.4s;
   border-radius: 2%;
-
 }
 
 /* Add Animation */
@@ -47,8 +45,6 @@
   color: red;
   float: right;
   font-size: 2rem;
-  
-
 }
 
 .close:hover,
@@ -81,9 +77,3 @@ p {
   background-color: white;
   color: black;
 }
-
-@media only screen and (max-width: 800px) {
-  /** .modal-content {
-
-  }
-  **/
