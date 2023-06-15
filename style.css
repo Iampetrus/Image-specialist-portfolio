@@ -8,15 +8,16 @@ html {
       margin: 0 auto;
   }
   
-  /* -------------------------------------- fonts */
+  /* -------------------------------------- fonts */ 
   #ppal, #sec {
       font-family: 'Oswald', sans-serif;
+      
   }
   
   h2, h3, h4, h5, p{
       font-family: 'Cardo', serif;
   }
-
+  
   /*---------------------------------------- clickame */
   #boton {
       font-weight: bold;
@@ -53,8 +54,8 @@ html {
       filter: url("#squiggly-4");
     }
   }
-
   /* ----------------------------------------- fonts */
+  
   h1 {
       /*font-family: 'Alternate Gothic';*/
       text-align: center;
@@ -130,6 +131,7 @@ html {
       border-color: #000;
       margin: 0 .4rem;
       background-color: white;
+  
       position: sticky;
       top: 0; 
       z-index: 99;
@@ -390,5 +392,6 @@ html {
   
   .sign h4 {
       font-size: .7rem;
+      padding-top: 1.5rem;
   }
   
