@@ -277,7 +277,7 @@
 
 	<footer>
 		<div class="sign">
-			<h4>2023. Made by 
+			<h4 class='copy-madeby'>&copy;<span id="year"></span> Made by 
 				<a class="hi" href="mailto:pedroagustinlecumberri@gmail.com?subject=Query%20from%20portfolio"><span class="mail">@petrus</span></a>
 			</h4>
 		</div>
@@ -314,6 +314,13 @@
 
 	<script src="JS.js"></script>
 	<script src="modal.js"></script>
+	<script>
+        // Actualiza el año automáticamente en el copyright
+        document.getElementById("year").textContent = new Date().getFullYear();
+        function redirectToPage(page) {
+            window.location.href = page;
+        }
+    </script>
 
 </body>
 </html>
