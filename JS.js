@@ -14,25 +14,33 @@ window.addEventListener('load', () => {
         console.warn("Advertencia: No se encontró el elemento #nombre-svg");
     }
     
-    // --- initial load secuence ---
+    // --- SECUENCIA DE PRESENTACIÓN ORDENADA ---
+    
+    // 1. Asegurar que la página esté completamente cargada y el fondo azul visible
+    // (La portada ya es visible por CSS)
+    
+    // 2.nombre después de 800ms
     setTimeout(() => {
         if (nombreSvg) {
             nombreSvg.style.opacity = '1';
             nombreSvg.style.pointerEvents = 'auto';
         }
-    }, 300);
+    }, 800);
     
+    // 3.logo después de 1500ms (700ms después del nombre)
     setTimeout(() => {
         logoTrigger.style.opacity = '1';
         logoTrigger.style.pointerEvents = 'auto';
-    }, 1000);
+    }, 1500);
     
-    // initial scroll blockage
+    // scroll bloqueado inicialmente
     body.style.overflow = 'hidden';
     
     // logo 'click' listener 
     logoTrigger.addEventListener('click', (event) => {
         event.preventDefault();
+        
+        // Ocultar nombre inmediatamente
         if (nombreSvg) {
             nombreSvg.style.opacity = '0';
         }
@@ -42,29 +50,32 @@ window.addEventListener('load', () => {
         const centerY = rect.top + rect.height / 2;
         const finalRadius = Math.hypot(window.innerWidth, window.innerHeight);
         
-        // radiance stoppage once clicked
+        // Detener animación de radiancia una vez clickeado
         logoTrigger.classList.add('animation-stopped');
         
-        // instantaneoues scale reduction start
+        // Reducir escala del logo instantáneamente
         logoTrigger.style.transform = 'translateX(-50%) scale(0)';
         logoTrigger.style.transition = 'transform 0.7s cubic-bezier(0.7, 0, 0.3, 1)';
         
+        // Configurar máscara para la transición
         portada.style.setProperty('--x', `${centerX}px`);
         portada.style.setProperty('--y', `${centerY}px`);
         portada.style.setProperty('--mask-size', `${finalRadius}px`);
         
-        // listening for the transition animation to end
+        // Escuchar el final de la transición de la máscara
         portada.addEventListener('transitionend', () => {
-            // Hide elements after animation stopped
+            // Ocultar elementos después de la animación
             portada.style.display = 'none';
             logoTrigger.style.display = 'none'; 
             if (nombreSvg) {
                 nombreSvg.style.display = 'none';
             }
             
+            // Permitir scroll y mostrar contenido del portfolio
             body.style.overflow = '';
+            body.classList.add('portfolio-loaded');
             
-            // Mobile functionality after portfolio load
+            // Inicializar funcionalidad móvil después de cargar portfolio
             initMobileTouchHandlers();
             
         }, { once: true });
@@ -72,19 +83,19 @@ window.addEventListener('load', () => {
 });
 
 function initMobileTouchHandlers() {
-    // is it mobile?
+    // ¿es dispositivo móvil?
     function isMobileDevice() {
         return window.innerWidth <= 800;
     }
     
-    // just apply it on mobile
+    // Solo aplicar en móvil
     if (isMobileDevice()) {
         const boxes = document.querySelectorAll('.box');
         let activeBox = null;
         
         boxes.forEach(box => {
             box.addEventListener('click', function(e) {
-                // If click is on youtube link do not disturb
+                // Si el click es en un enlace de youtube no interferir
                 if (e.target.closest('.youtube-link, .youtube-link2, .video-link')) {
                     return; // Permitir que el enlace funcione normalmente
                 }
@@ -92,25 +103,25 @@ function initMobileTouchHandlers() {
                 e.preventDefault();
                 e.stopPropagation();
                 
-                // if its active, de-activate it
+                // Si ya está activo, desactivarlo
                 if (activeBox === this) {
                     this.classList.remove('mobile-active');
                     activeBox = null;
                     return;
                 }
                 
-                // De-activate any previous active box 
+                // Desactivar cualquier box activo anterior
                 if (activeBox) {
                     activeBox.classList.remove('mobile-active');
                 }
                 
-                // Activate new box
+                // Activar nuevo box
                 this.classList.add('mobile-active');
                 activeBox = this;
             });
         });
         
-        // Close any active box once clicked away (out)
+        // Cerrar cualquier box activo al hacer click fuera
         document.addEventListener('click', function(e) {
             if (!e.target.closest('.box') && activeBox) {
                 activeBox.classList.remove('mobile-active');
@@ -118,7 +129,7 @@ function initMobileTouchHandlers() {
             }
         });
         
-        // Handle resize/orientation changes
+        // Manejar cambios de tamaño/orientación
         window.addEventListener('resize', function() {
             if (window.innerWidth > 800 && activeBox) {
                 activeBox.classList.remove('mobile-active');

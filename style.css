@@ -11,10 +11,29 @@ html {
     box-sizing: inherit;
 }
 
+/* NUEVA REGLA: Ocultar contenido inicialmente */
 body {
     max-width: 1800px;
     margin: 0 auto;
     font-family: 'Cardo', serif;
+    overflow: hidden; /* Ocultar scroll inicialmente */
+}
+
+/* Ocultar todo el contenido del portfolio inicialmente */
+body:not(.portfolio-loaded) header,
+body:not(.portfolio-loaded) main,
+body:not(.portfolio-loaded) footer {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.7s ease-in-out, visibility 0.7s ease-in-out;
+}
+
+/* Mostrar contenido cuando se carga el portfolio */
+body.portfolio-loaded header,
+body.portfolio-loaded main,
+body.portfolio-loaded footer {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* ================================================= */
@@ -170,11 +189,11 @@ img {
 #Klog { margin: 10% auto; width: 50%; }
 #Llog { margin: 50% auto 0 auto; width: 40%; }
 #Mlog { margin: 20% auto 0 auto; width: 60%; }
-#Nlog { margin: 50% auto 0 auto; width: 35%; }
+#Nlog { margin: 50% auto; width: 35%; }
 #Olog { margin: 13% auto 0 auto; width: 40%; }
 #Plog { margin: 22% auto; width: 60%; }
 #Qlog { margin: 12% auto 0 auto; width: 20%; }
-#Rlog { margin: 2% auto; width: 55%; }
+#Rlog { margin: 5% 30%; width: 55%; }
 #Slog { margin: 22% auto 0 auto; width: 40%; }
 #Tlog { margin: 12% auto 0 auto; width: 60%; }
 #Vlog { margin: 40% auto 0 auto; width: 60%; }
@@ -217,6 +236,7 @@ img {
     font-size: 0.7rem;
     padding-top: 1.5rem;
 }
+
 /* ==================================== */
 /* ===        PORTADA               === */
 /* ==================================== */
@@ -239,6 +259,9 @@ img {
     z-index: 200;
     --x: 50%;
     --y: 50%;
+    /* NUEVA REGLA: Mostrar portada inmediatamente */
+    opacity: 1;
+    visibility: visible;
 
     mask:
         radial-gradient(circle at var(--x) var(--y), transparent var(--mask-size), black var(--mask-size));
@@ -247,6 +270,13 @@ img {
         radial-gradient(circle at var(--x) var(--y), transparent var(--mask-size), black var(--mask-size));
 
     transition: --mask-size 0.7s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+/* NUEVA CLASE: Para cuando la portada está oculta */
+#portada.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.7s ease-in-out, visibility 0.7s ease-in-out;
 }
 
 #logo-trigger {
@@ -262,6 +292,10 @@ img {
     border-radius: 50%;
     background-color: #5F7F86;
     animation: fade-background 6s ease-in-out infinite;
+    /* NUEVA REGLA: Oculto inicialmente */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.7s ease-in-out;
 }
 
 #logo-trigger:hover {
@@ -332,17 +366,14 @@ img {
     z-index: 202;
     transition: opacity 0.7s ease-in-out;
     width: 18%;
+    /* NUEVA REGLA: Oculto inicialmente */
+    opacity: 0;
+    pointer-events: none;
 }
 
 @keyframes fade-background {
     0%, 100% { background-color: rgba(95, 127, 134, 1); }
     50% { background-color: rgba(95, 127, 134, 0.2); }
-}
-
-#nombre-svg, #logo-trigger {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.7s ease-in-out;
 }
 
 /* ================================================= */
