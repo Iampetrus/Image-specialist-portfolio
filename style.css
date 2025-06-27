@@ -11,7 +11,7 @@ html {
     box-sizing: inherit;
 }
 
-/* NUEVA REGLA: Ocultar contenido inicialmente */
+
 body {
     max-width: 1800px;
     margin: 0 auto;
@@ -19,7 +19,7 @@ body {
     overflow: hidden; /* Ocultar scroll inicialmente */
 }
 
-/* Ocultar todo el contenido del portfolio inicialmente */
+
 body:not(.portfolio-loaded) header,
 body:not(.portfolio-loaded) main,
 body:not(.portfolio-loaded) footer {
@@ -28,7 +28,7 @@ body:not(.portfolio-loaded) footer {
     transition: opacity 0.7s ease-in-out, visibility 0.7s ease-in-out;
 }
 
-/* Mostrar contenido cuando se carga el portfolio */
+
 body.portfolio-loaded header,
 body.portfolio-loaded main,
 body.portfolio-loaded footer {
@@ -116,18 +116,22 @@ p {
 /* ===              LAYOUT SECTIONS              === */
 /* ================================================= */
 header {
-    border-bottom: 1px solid black;
+    
     margin: 0 0.4rem;
-    background-color: white;
-    position: sticky;
-    top: 0;
-    z-index: 99;
     padding: 0.1rem 0;
 }
 
 .about {
+    position: fixed;  
+    left: .8rem;
+    right: .8rem;
+    width: auto;
     text-align: center;
-    margin: 0 5vw;
+    background-color: white; 
+    z-index: 100;      
+    padding: 0.5rem 0; 
+    border-bottom: 1px solid black;
+    isolation: isolate; 
 }
 
 .dos {
@@ -147,8 +151,16 @@ header {
     overflow: hidden;
 }
 
+#myModal {
+    padding-top: 8%;
+}
+
 .modal-body > p {
     margin-bottom: 1rem;
+}
+
+main {
+    padding-top: 4.5rem; /* */
 }
 
 /* =============================================== */
@@ -272,7 +284,7 @@ img {
     transition: --mask-size 0.7s cubic-bezier(0.7, 0, 0.3, 1);
 }
 
-/* NUEVA CLASE: Para cuando la portada está oculta */
+/* Para cuando la portada está oculta */
 #portada.hidden {
     opacity: 0;
     visibility: hidden;
@@ -435,9 +447,19 @@ img {
 /* ===              MEDIA QUERIES                === */
 /* ================================================= */
 @media only screen and (max-width: 800px) {
-     .box::after {
+    
+    main {
+        padding-top: 2.4rem; /* */
+    }
+
+    .about {
+        padding: 0.2rem 0;
+    }
+    
+    .box::after {
         display: none;
     }
+
     .dos {
         grid-template-columns: 1fr;
         grid-gap: 1rem;
@@ -481,5 +503,28 @@ img {
         animation: pulseGlow 4s ease-in-out infinite;
 
         pointer-events: none;
+    }
+
+    .about {
+        background-color: transparent;
+    }
+
+    .about::before {
+        content: '';
+        position: absolute;
+        background: white;
+        
+        left: -1rem; 
+        right: -1rem;
+        
+        top: 0;
+        bottom: 0;
+        
+        z-index: -1; 
+    }
+
+    .sign h4 {
+        font-size: 0.6rem; 
+        padding: 1.2rem 0;
     }
 }
